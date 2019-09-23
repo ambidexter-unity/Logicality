@@ -1,6 +1,9 @@
 {
-  "name": "vcow.base.logicality",
+  "name": "io.ambidexter.logicality",
   "version": "1.0.0",
+  "unity": "2019.1",
+  "displayName": "Collection base logic library.",
+  "description": "Collection base logic library.",
   "dependencies": {
   }
 }
