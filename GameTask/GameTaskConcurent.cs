@@ -31,7 +31,7 @@ namespace Common.GameTask
 			_startedTasksCount = _tasks.Count;
 			if (_startedTasksCount > 0)
 			{
-				_tasks.ToList().ForEach(task =>
+				foreach (var task in _tasks.ToArray())
 				{
 					if (task.Completed)
 					{
@@ -41,7 +41,7 @@ namespace Common.GameTask
 					}
 
 					task.CompleteEvent += SubTaskCompleteHandler;
-				});
+				}
 
 				_tasks.ForEach(task => task.Start());
 			}
