@@ -43,7 +43,10 @@ namespace Common.GameTask
 					task.CompleteEvent += SubTaskCompleteHandler;
 				}
 
-				_tasks.ForEach(task => task.Start());
+				foreach (var task in _tasks.ToArray())
+				{
+					task.Start();
+				}
 			}
 			else
 			{
